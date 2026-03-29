@@ -1,0 +1,16 @@
+[package]
+name = "app-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+sqlx.workspace = true
+directories.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+chrono = "0.4"

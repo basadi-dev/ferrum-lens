@@ -1,0 +1,31 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Ferrum Lens Contributors"]
+
+[workspace.dependencies]
+app-core = { path = "crates/app-core" }
+
+# egui / eframe for GUI
+eframe = "0.31"
+egui = "0.31"
+egui_extras = { version = "0.31", features = ["all_loaders", "syntect"] }
+
+# Async runtime & error handling
+tokio = { version = "1.43", features = ["full"] }
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Database client abstractions
+sqlx = { version = "0.8.3", features = ["runtime-tokio-rustls", "sqlite", "postgres", "mysql", "uuid", "chrono", "json"] }
+
+# Utility
+directories = "5.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.10", features = ["v4", "serde"] }

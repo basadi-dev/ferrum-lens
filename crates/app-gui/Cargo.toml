@@ -1,0 +1,16 @@
+[package]
+name = "app-gui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+app-core.workspace = true
+eframe.workspace = true
+egui.workspace = true
+egui_extras.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+rfd = "0.14"
+uuid = { workspace = true, features = ["v4"] }
